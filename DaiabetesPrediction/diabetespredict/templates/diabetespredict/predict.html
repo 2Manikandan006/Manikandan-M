@@ -1,0 +1,39 @@
+{% extends "diabetespredict/base.html" %}
+
+{% block content %}
+<div class="container">
+    <h3>Diabetes Prediction</h3>
+    <div class="card">
+        <form method="POST" action="{% url 'result' %}" class="prediction-form">
+            {% csrf_token %}
+            <label for="pregnancies">Pregnancies:</label>
+            <input type="number" id="pregnancies" name="pregnancies" required>
+
+            <label for="glucose">Glucose Level:</label>
+            <input type="number" id="glucose" name="glucose" required>
+
+            <label for="blood_pressure">Blood Pressure:</label>
+            <input type="number" id="blood_pressure" name="blood_pressure" required>
+
+            <label for="skin_thickness">Skin Thickness:</label>
+            <input type="number" id="skin_thickness" name="skin_thickness" required>
+
+            <label for="insulin">Insulin:</label>
+            <input type="number" id="insulin" name="insulin" required>
+
+            <label for="bmi">BMI:</label>
+            <input type="text" id="bmi" name="bmi" required>
+
+            <label for="dpf">Diabetes Pedigree Function:</label>
+            <input type="text" id="dpf" name="dpf" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        <h4>Result: {{ result2 }}</h4>
+    </div>
+</div>
+{% endblock content %}

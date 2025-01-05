@@ -1,0 +1,97 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    color: #333;
+}
+
+nav {
+    background: #004d7a;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background 0.3s;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background: #00688b;
+}
+
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Homepage Styles */
+.container h3 {
+    text-align: center;
+    font-size: 1.8em;
+    color: #004d7a;
+}
+
+.container p {
+    text-align: center;
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Prediction Page Styles */
+.prediction-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.prediction-form label {
+    grid-column: span 2;
+    font-weight: bold;
+    color: #333;
+}
+
+.prediction-form input {
+    grid-column: span 2;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.prediction-form button {
+    grid-column: span 2;
+    padding: 10px;
+    background: #004d7a;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.prediction-form button:hover {
+    background: #00688b;
+}
